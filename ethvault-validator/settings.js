@@ -65,4 +65,11 @@ module.exports = {
         TYPE: "PK",
         DATA: process.env.PK,
     },
+
+    VALIDATOR_MONITOR: {
+        Ozys: {
+            Endpoint: process.env.REPORT_URL,
+            Interval: 60 * 1000,
+        },
+    },
 }
