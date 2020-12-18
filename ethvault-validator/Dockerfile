@@ -1,7 +1,16 @@
 FROM node:dubnium
-ENV PROFILE=docker
-COPY nodes/validator/package.json /validator/package.json
-RUN cd /validator && yarn
-COPY nodes/validator /validator
+
+ENV PROFILE docker
+ENV VERSION v0.0.5
+
+WORKDIR /validator
+
+COPY nodes/validator/package.json package.json
+
+RUN yarn
+
+COPY nodes/validator ./
 COPY ethvault-validator/settings.js /validator/config/docker/
-CMD cd validator && node validator_docker.js
+
+ENTRYPOINT [ "node" ]
+CMD [ "validator_docker.js" ]
