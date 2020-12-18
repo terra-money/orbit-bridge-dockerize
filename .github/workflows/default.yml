@@ -38,6 +38,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
+          file: ethvault-validator/Dockerfile
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/orbit-ethvault-validator:${{ github.sha }}
             ${{ steps.login-ecr.outputs.registry }}/orbit-ethvault-validator:master
