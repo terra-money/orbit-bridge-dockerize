@@ -1,7 +1,7 @@
 FROM node:dubnium
 
 ENV PROFILE docker
-ENV VERSION v0.0.5
+ENV VERSION v0.1.0
 
 WORKDIR /validator
 
