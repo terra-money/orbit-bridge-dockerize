@@ -2,7 +2,8 @@ name: default
 
 on:
   push:
-    - master
+    branches:
+      - master
 
 jobs:
   delivery:
