@@ -52,8 +52,8 @@ module.exports = {
                 chainId: 8217,
 
                 // Your Credential
-                accessKeyId: "",
-                secretAccessKey: ""
+                accessKeyId: process.env.KAS_KEY_ID,
+                secretAccessKey: process.env.KAS_ACCESS_KEY
             }
         },
     },
