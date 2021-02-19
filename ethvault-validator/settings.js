@@ -43,9 +43,9 @@ module.exports = {
             socket: process.env.ETH_SOCKET,
         },
         Klaytn: {
-            isKas: false,
-            rpc: "https://api.cypress.klaytn.net:8651",
-            socket: "wss://api.cypress.klaytn.net:8652",
+            isKas: true,
+            rpc: "",
+            socket: "",
             Kas: {
                 // KAS Default
                 rpc: "https://node-api.klaytnapi.com/v1/klaytn",
